@@ -24,6 +24,7 @@ urlpatterns = [
     path('students/<str:edit>/<str:qs>', main_views.another),
     path('<str:action>/<str:id>', main_views.action_handler),
     path('teachers/', teacher_views.home),
+    path('teachers/<str:edit>/<str:qs>', teacher_views.another),
 
 
 
