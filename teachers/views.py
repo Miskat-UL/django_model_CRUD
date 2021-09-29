@@ -22,6 +22,32 @@ def home(request):
         return redirect("/teachers")
 
 
+def show(request, *args, **kwargs):
+    if request.method == "GET":
+        query = Teachers.objects.all()
+        context = {
+            "object": query
+        }
+        return render(request, 'teacher_show.html', context)
+
+
+def search(request, *args, **kwargs):
+    if request.method == "GET":
+        return render(request, "teacher_search.html")
+    elif request.method == "POST":
+        name = request.POST['search']
+
+        value = Teachers.objects.get(name=name)
+
+        context = {
+            "tea": value
+        }
+        return render(request, "teacher_search.html", context)
+
+
+
+
+
 def another(request, edit, qs):
     if edit == "delete":
         student = Teachers.objects.get(id=qs)

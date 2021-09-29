@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>List of all teachers !!!</h1>
+    {%for tea in object%}
+        <h1>{{tea.name}} -  {{tea.teacher_id}}-{{tea.course}} -{{tea.email}}-{{tea.phone}}</h1>
+    {%endfor%}
+</body>
+</html>
