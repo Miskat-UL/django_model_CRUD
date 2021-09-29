@@ -25,6 +25,8 @@ urlpatterns = [
     path('<str:action>/<str:id>', main_views.action_handler),
     path('teachers/', teacher_views.home),
     path('teachers/<str:edit>/<str:qs>', teacher_views.another),
+    path('show/', teacher_views.show),
+    path('search/', teacher_views.search),
 
 
 

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" >{% csrf_token%}
+        <input type="text" name="search">
+        <button>Search</button>
+    </form>
+ <h1>{{tea.name}} -  {{tea.teacher_id}}-{{tea.course}} -{{tea.email}}-{{tea.phone}}</h1>
+</body>
+</html>
